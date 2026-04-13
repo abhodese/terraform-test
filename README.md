@@ -71,6 +71,12 @@ To enable once in GitHub repo settings:
 
 Your site will be published at your GitHub Pages URL.
 
+
+## LinkedIn data population note
+
+I pre-filled `script.js` using publicly visible LinkedIn/search snippet information for this profile URL.
+Please review and correct any fields that are hidden by LinkedIn privacy/login requirements.
+
 ## Personalization checklist
 
 Update `script.js`:

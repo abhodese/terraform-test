@@ -1,33 +1,33 @@
 const profile = {
   name: "Abhishek Sundaresan",
-  headline: "Product, strategy, and innovation leader",
-  location: "United States",
+  headline: "Product Manager | Product Owner | Technical Business Analyst",
+  location: "Cary, North Carolina, United States",
   about:
-    "Cross-functional leader focused on building technology products and growth strategy with measurable business outcomes.",
+    "Product and technology professional with a background spanning product management, software development, and cross-functional delivery.",
   email: "hello@example.com",
   linkedinUrl: "https://www.linkedin.com/in/abhishek-sundaresan-4396a7142/",
   experience: [
     {
-      role: "Product & Strategy Leader",
-      company: "Add current company",
-      period: "Update from LinkedIn",
-      details: "Replace this with your latest role highlights from LinkedIn."
+      role: "Product/Technology Professional",
+      company: "MetLife",
+      period: "Current",
+      details: "Leading and supporting product and technology initiatives with business impact."
     },
     {
-      role: "Previous Leadership Role",
-      company: "Add previous company",
-      period: "Update from LinkedIn",
-      details: "Replace this with a measurable impact statement."
+      role: "Product Manager",
+      company: "beatBread",
+      period: "Previous",
+      details: "Managed product features and internal platform improvements in collaboration with technical and business teams."
     }
   ],
   education: [
     {
-      school: "Add school",
-      degree: "Add degree",
-      period: "Add years"
+      school: "Carnegie Mellon University",
+      degree: "Master of Information Systems Management",
+      period: "2021 - 2022"
     }
   ],
-  skills: ["Product Strategy", "Digital Transformation", "AI/ML", "Go-to-Market", "Leadership", "Analytics"]
+  skills: ["Product Management", "Product Strategy", "Business Analysis", "Software Development", "AI/ML", "Data-Driven Decision Making"]
 };
 
 const setText = (id, value) => {
