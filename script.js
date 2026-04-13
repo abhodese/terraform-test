@@ -1,23 +1,29 @@
 const profile = {
   name: "Abhishek Sundaresan",
-  headline: "Product Manager | Product Owner | Technical Business Analyst",
+  headline: "Product Manager | Software Developer | Carnegie Mellon MISM",
   location: "Cary, North Carolina, United States",
   about:
-    "Product and technology professional with a background spanning product management, software development, and cross-functional delivery.",
+    "Product and technology professional with experience across product management and software development, with graduate training in Information Systems Management from Carnegie Mellon University.",
   email: "hello@example.com",
   linkedinUrl: "https://www.linkedin.com/in/abhishek-sundaresan-4396a7142/",
   experience: [
     {
-      role: "Product/Technology Professional",
+      role: "Technology Professional",
       company: "MetLife",
       period: "Current",
-      details: "Leading and supporting product and technology initiatives with business impact."
+      details: "Based in Cary, North Carolina; driving product and technology initiatives."
     },
     {
       role: "Product Manager",
       company: "beatBread",
       period: "Previous",
-      details: "Managed product features and internal platform improvements in collaboration with technical and business teams."
+      details: "Managed product and ERP-related feature delivery with cross-functional stakeholders."
+    },
+    {
+      role: "Software Developer",
+      company: "Prior experience",
+      period: "Previous",
+      details: "Hands-on software development background supporting technical product execution."
     }
   ],
   education: [
@@ -27,7 +33,7 @@ const profile = {
       period: "2021 - 2022"
     }
   ],
-  skills: ["Product Management", "Product Strategy", "Business Analysis", "Software Development", "AI/ML", "Data-Driven Decision Making"]
+  skills: ["Product Management", "ERP", "Business Analysis", "Software Development", "Product Strategy", "AI/ML"]
 };
 
 const setText = (id, value) => {
