@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: JavaScript syntax check
+        run: |
+          node --check script.js
+          node --check api/generate-summary.js
+          node --check netlify/functions/generate-summary.js
+
+      - name: HTML smoke check
+        run: test -f index.html
