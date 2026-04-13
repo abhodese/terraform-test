@@ -18,11 +18,19 @@ jobs:
         with:
           node-version: 20
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - name: JavaScript syntax check
         run: |
           node --check script.js
           node --check api/generate-summary.js
           node --check netlify/functions/generate-summary.js
+
+      - name: Python syntax check
+        run: python -m py_compile backend/app/main.py backend/app/graph.py
 
       - name: HTML smoke check
         run: test -f index.html
