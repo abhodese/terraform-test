@@ -1,39 +1,50 @@
 const profile = {
   name: "Abhishek Sundaresan",
-  headline: "Product Manager | Software Developer | Carnegie Mellon MISM",
+  headline: "Technical Product Manager | Product Owner | AI-Driven Product Strategy",
   location: "Cary, North Carolina, United States",
   about:
-    "Product and technology professional with experience across product management and software development, with graduate training in Information Systems Management from Carnegie Mellon University.",
-  email: "hello@example.com",
+    "I build technology products that improve operational efficiency and customer outcomes. My background spans product management and software development, and I enjoy turning ambiguous business problems into measurable product impact.",
+  email: "abhishek.sundaresan1@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/abhishek-sundaresan-4396a7142/",
   experience: [
+    {
+      role: "Technical Product Manager",
+      company: "beatBread",
+      period: "May 2023 - Mar 2024",
+      details: "Launched ERP web products that automated finance, accounting, operations, and sales workflows; improved efficiency and reduced annual costs."
+    },
+    {
+      role: "Product Manager",
+      company: "Carnegie Mellon University - School of Computer Science",
+      period: "Feb 2023 - Jul 2023",
+      details: "Delivered user-centric Open Learning Initiative features and improved platform engagement and course completion outcomes."
+    },
+    {
+      role: "Technical Product Lead Intern",
+      company: "beatBread",
+      period: "May 2022 - Aug 2022",
+      details: "Owned product definition and delivery of payments tooling and collaborated across business, sales, and engineering stakeholders."
+    },
     {
       role: "Technology Professional",
       company: "MetLife",
       period: "Current",
-      details: "Based in Cary, North Carolina; driving product and technology initiatives."
-    },
-    {
-      role: "Product Manager",
-      company: "beatBread",
-      period: "Previous",
-      details: "Managed product and ERP-related feature delivery with cross-functional stakeholders."
-    },
-    {
-      role: "Software Developer",
-      company: "Prior experience",
-      period: "Previous",
-      details: "Hands-on software development background supporting technical product execution."
+      details: "Currently based in Cary, NC, contributing to product and technology initiatives."
     }
   ],
   education: [
     {
       school: "Carnegie Mellon University",
       degree: "Master of Information Systems Management",
-      period: "2021 - 2022"
+      period: "Aug 2021 - Dec 2022"
+    },
+    {
+      school: "Anna University",
+      degree: "Bachelor's in Information Technology",
+      period: "Jul 2015 - May 2019"
     }
   ],
-  skills: ["Product Management", "ERP", "Business Analysis", "Software Development", "Product Strategy", "AI/ML"]
+  skills: ["Technical Product Management", "Product Strategy", "ERP Products", "Generative AI", "Agile Delivery", "Software Development"]
 };
 
 const setText = (id, value) => {

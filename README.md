@@ -74,7 +74,7 @@ Your site will be published at your GitHub Pages URL.
 
 ## LinkedIn data population note
 
-I pre-filled `script.js` using publicly visible LinkedIn/search snippet information for this profile URL (name, location, MetLife, CMU MISM, product-manager/software-developer background).
+I pre-filled `script.js` using publicly visible profile information from LinkedIn snippets and public resume/portfolio pages (beatBread roles, CMU MISM, Anna University, and product-management background).
 Please review and correct any fields that are hidden by LinkedIn privacy/login requirements.
 
 ## Personalization checklist
