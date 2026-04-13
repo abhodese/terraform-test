@@ -1,37 +1,35 @@
-# AI Portfolio Stack (Dynamic UI + Chatbot + Backend)
+# Modern AI Portfolio (Interactive UI + Chatbot Backend)
 
-Implemented the stack you requested:
+Upgraded with a modern interactive experience inspired by the style reference you shared.
 
-- **Frontend**: Next.js (animated UI with Framer Motion)
-- **Backend API**: FastAPI
-- **Orchestration**: LangGraph
-- **LLM**: Groq Llama 3
-- **Embeddings/Vector/Obs hooks**: ready to extend with Cohere, Qdrant, Langfuse
+## Stack
 
-## Project structure
+- **Frontend:** Next.js + Framer Motion animations
+- **Backend:** FastAPI + LangGraph + Groq
+- **Runtime:** Docker Compose for local full-stack launch
 
-- `frontend/` Next.js app with dynamic animated UI and chatbot panel.
-- `backend/` FastAPI service with LangGraph chatbot workflow.
-- `docker-compose.yml` for local multi-service run.
+## UX features added
 
-## Run locally
+- Animated hero and section entrances
+- Interactive project cards with hover transitions
+- Experience timeline cards
+- Live AI chat assistant with:
+  - quick-prompt chips
+  - message bubbles
+  - loading/typing state
+  - custom question input
+
+## Run
 
 ```bash
 docker compose up
 ```
 
-Then open:
+Then visit:
 
 - Frontend: <http://localhost:3000>
-- Backend: <http://localhost:8000/docs>
+- Backend docs: <http://localhost:8000/docs>
 
-## Environment variables
-
-Set before startup:
+## Env var
 
 - `GROQ_API_KEY`
-
-## Notes
-
-- Current chatbot uses LangGraph + Groq directly.
-- Add Qdrant/Cohere/Langfuse integration in `backend/app/graph.py` as the next step for full RAG/observability.
