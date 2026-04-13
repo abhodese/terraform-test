@@ -1,144 +1,132 @@
 const profile = {
   name: "Abhishek Sundaresan",
-  headline: "Technical Product Manager | Product Owner | AI-Driven Product Strategy",
-  location: "Cary, North Carolina, United States",
-  about:
-    "I build technology products that improve operational efficiency and customer outcomes. My background spans product management and software development, and I enjoy turning ambiguous business problems into measurable product impact.",
-  email: "abhishek.sundaresan1@gmail.com",
-  linkedinUrl: "https://www.linkedin.com/in/abhishek-sundaresan-4396a7142/",
+  role: "Technical Lead",
+  summary:
+    "Lead Software Engineer with 5+ years of experience building scalable microservices and cloud-native backend systems using Java, Spring Boot, Golang, and AWS. Strong background in REST APIs, event-driven architecture, distributed systems, observability, CI/CD, and production support.",
+  contacts: [
+    "+91 9591785504",
+    "abho.sundaresan@gmail.com",
+    "github.com/abhodese",
+    "Bangalore, India"
+  ],
+  skills: [
+    "Java", "Golang", "Python", "Node.js", "Spring Boot", "Hibernate", "Microservices", "Event-Driven Systems", "REST APIs", "AWS", "Lambda", "ECS", "S3", "RDS", "CloudWatch", "IAM", "PostgreSQL", "MongoDB", "Redis", "Terraform", "Docker", "Kubernetes", "CI/CD", "Jenkins", "Azure DevOps", "JUnit", "Mockito", "Prometheus", "Grafana", "ELK", "Splunk", "Kafka", "GraphQL", "Agile", "Distributed Systems"
+  ],
+  achievements: [
+    "Improved MTTR by 35% with observability and monitoring upgrades.",
+    "Led SAP + Salesforce integration work that increased scalability by 40%."
+  ],
+  certifications: [
+    "AWS Solutions Architect - Associate",
+    "Certified Java Professional",
+    "Building AI Agents: Automation and NLP"
+  ],
+  projects: [
+    {
+      name: "LTOHub - CPQ Platform (HP)",
+      location: "Bangalore, India",
+      period: "2023 - 2026",
+      points: [
+        "Built microservices backend integrated with SAP BRIM and AWS (ECS, Lambda, CloudWatch, OpenSearch).",
+        "Designed cost computation and quote processing services.",
+        "Enabled real-time observability using CloudWatch and X-Ray.",
+        "Structured data domains for analytics and downstream systems.",
+        "Automated infrastructure using Terraform and ECS."
+      ]
+    }
+  ],
   experience: [
     {
-      role: "Technical Product Manager",
-      company: "beatBread",
-      period: "May 2023 - Mar 2024",
-      details: "Launched ERP web products that automated finance, accounting, operations, and sales workflows; improved efficiency and reduced annual costs."
+      company: "Birlasoft (Client - HP)",
+      role: "Technical Specialist and Lead - App Development",
+      location: "Bangalore",
+      period: "02/2025 - Present",
+      points: [
+        "Led backend engineering for HP Contractual CPQ and LTOHub platforms.",
+        "Designed RESTful microservices and event-driven services integrating SAP, Salesforce, and internal systems.",
+        "Provisioned AWS infrastructure via Terraform across EC2, IAM, S3, RDS, Lambda, and CloudWatch.",
+        "Improved MTTR by 35% through CloudWatch, Prometheus, and Grafana observability.",
+        "Guided schema design and performance optimization across PostgreSQL, MongoDB, and Redis.",
+        "Architected event-driven systems using Kafka for scalable decoupled pipelines."
+      ]
     },
     {
-      role: "Product Manager",
-      company: "Carnegie Mellon University - School of Computer Science",
-      period: "Feb 2023 - Jul 2023",
-      details: "Delivered user-centric Open Learning Initiative features and improved platform engagement and course completion outcomes."
+      company: "HP",
+      role: "Senior Full Stack Developer",
+      location: "Bangalore",
+      period: "07/2023 - 02/2025",
+      points: [
+        "Developed distributed Java microservices for monitoring and managing on-prem and cloud systems.",
+        "Built REST APIs and backend integrations for cloud and Kubernetes-based platforms.",
+        "Automated deployments using Terraform and improved CI/CD reliability.",
+        "Delivered tested, maintainable code with JUnit and Mockito.",
+        "Improved service reliability and performance with observability-driven debugging."
+      ]
     },
     {
-      role: "Technical Product Lead Intern",
-      company: "beatBread",
-      period: "May 2022 - Aug 2022",
-      details: "Owned product definition and delivery of payments tooling and collaborated across business, sales, and engineering stakeholders."
+      company: "Zemoso Technologies",
+      role: "Senior Full Stack Developer",
+      location: "Remote",
+      period: "01/2023 - 07/2023",
+      points: [
+        "Built distributed backend services in Java and Go for scheduling and automation.",
+        "Improved processing performance by 30% through backend optimization and workflow design."
+      ]
     },
     {
-      role: "Technology Professional",
-      company: "MetLife",
-      period: "Current",
-      details: "Currently based in Cary, NC, contributing to product and technology initiatives."
+      company: "Oracle",
+      role: "Solutions Engineer",
+      location: "Bangalore",
+      period: "07/2019 - 12/2022",
+      points: [
+        "Developed Java microservices to automate lifecycle management of Oracle Cloud platform components.",
+        "Built delivery pipelines and logging/monitoring solutions using ELK.",
+        "Designed scalable, reliable cloud-hosted backend services with strong operational focus."
+      ]
     }
-  ],
-  education: [
-    {
-      school: "Carnegie Mellon University",
-      degree: "Master of Information Systems Management",
-      period: "Aug 2021 - Dec 2022"
-    },
-    {
-      school: "Anna University",
-      degree: "Bachelor's in Information Technology",
-      period: "Jul 2015 - May 2019"
-    }
-  ],
-  skills: ["Technical Product Management", "Product Strategy", "ERP Products", "Generative AI", "Agile Delivery", "Software Development"]
+  ]
 };
 
 const setText = (id, value) => {
-  const element = document.getElementById(id);
-  if (element) element.textContent = value;
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+};
+
+const renderList = (id, items) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.innerHTML = items.map((item) => `<li>${item}</li>`).join("");
+};
+
+const renderItems = (id, items, mapper) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.innerHTML = items.map(mapper).join("");
 };
 
 setText("name", profile.name);
-setText("headline", profile.headline);
-setText("location", profile.location);
-setText("about", profile.about);
-setText("footerName", profile.name);
-setText("year", new Date().getFullYear());
+setText("role", profile.role);
+setText("summary", profile.summary);
 
-const linkedin = document.getElementById("linkedin");
-if (linkedin) linkedin.href = profile.linkedinUrl;
+renderList("contacts", profile.contacts);
+renderList("skills", profile.skills);
+renderList("achievements", profile.achievements);
+renderList("certifications", profile.certifications);
 
-const email = document.getElementById("email");
-if (email) email.href = `mailto:${profile.email}`;
+renderItems(
+  "projects",
+  profile.projects,
+  (project) =>
+    `<article class="item"><h3>${project.name}</h3><p class="meta">${project.location} · ${project.period}</p><ul>${project.points
+      .map((point) => `<li>${point}</li>`)
+      .join("")}</ul></article>`
+);
 
-const listRenderer = (containerId, items, formatter) => {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  container.innerHTML = items.map(formatter).join("");
-};
-
-listRenderer(
+renderItems(
   "experience",
   profile.experience,
   (job) =>
-    `<li><strong>${job.role}</strong> · ${job.company}<br /><small>${job.period}</small><p>${job.details}</p></li>`
+    `<article class="item"><h3>${job.company}</h3><p><strong>${job.role}</strong></p><p class="meta">${job.location} · ${job.period}</p><ul>${job.points
+      .map((point) => `<li>${point}</li>`)
+      .join("")}</ul></article>`
 );
-
-listRenderer(
-  "education",
-  profile.education,
-  (item) => `<li><strong>${item.school}</strong><br /><small>${item.degree} · ${item.period}</small></li>`
-);
-
-listRenderer("skills", profile.skills, (skill) => `<span>${skill}</span>`);
-
-const buildPrompt = () => {
-  const recentRole = profile.experience[0];
-  return [
-    `Write a concise professional summary for ${profile.name}.`,
-    `Headline: ${profile.headline}.`,
-    `Location: ${profile.location}.`,
-    `Top skills: ${profile.skills.slice(0, 5).join(", ")}.`,
-    `Most recent role: ${recentRole?.role} at ${recentRole?.company}.`,
-    "Tone: executive, strategic, and outcomes-focused."
-  ].join(" ");
-};
-
-const summaryButton = document.getElementById("generateSummary");
-const summaryText = document.getElementById("aiSummary");
-
-const fallbackSummary = () => {
-  const recentRole = profile.experience[0];
-  return `${profile.name} is a ${profile.headline} based in ${profile.location}. ` +
-    `He drives impact through ${profile.skills.slice(0, 3).join(", ")} and currently leads initiatives as ${recentRole?.role} at ${recentRole?.company}.`;
-};
-
-const generateSummary = async () => {
-  summaryText.textContent = "Generating summary...";
-
-  try {
-    const payload = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt: buildPrompt() })
-    };
-
-    const endpoints = ["/api/generate-summary", "/.netlify/functions/generate-summary"];
-    let lastError = null;
-
-    for (const endpoint of endpoints) {
-      try {
-        const response = await fetch(endpoint, payload);
-        if (!response.ok) {
-          throw new Error(`API request failed with status ${response.status}`);
-        }
-        const data = await response.json();
-        summaryText.textContent = `AI Summary: ${data.summary}`;
-        return;
-      } catch (error) {
-        lastError = error;
-      }
-    }
-
-    throw lastError || new Error("No AI endpoint available");
-  } catch (error) {
-    summaryText.textContent = `AI Summary (fallback): ${fallbackSummary()}`;
-    console.warn("Falling back to local summary mode:", error.message);
-  }
-};
-
-summaryButton?.addEventListener("click", generateSummary);

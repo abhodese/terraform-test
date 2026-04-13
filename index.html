@@ -3,79 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek Sundaresan | AI Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio website generated from LinkedIn profile data with AI-powered professional summary support."
-    />
+    <title>Abhishek Sundaresan | Technical Lead</title>
+    <meta name="description" content="Technical Lead portfolio and resume website." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__content container">
-        <p class="eyebrow">Generative AI Portfolio</p>
-        <h1 id="name">Abhishek Sundaresan</h1>
-        <p id="headline" class="headline">Technical Product Manager | Product Owner | AI-Driven Product Strategy</p>
-        <p id="location" class="subtle">Cary, North Carolina, United States</p>
-        <div class="hero__actions">
-          <a id="linkedin" class="btn btn--primary" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a id="email" class="btn btn--ghost" href="#">Contact Me</a>
-        </div>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="card">
-        <h2>About</h2>
-        <p id="about">Professional summary from LinkedIn profile.</p>
-      </section>
-
-      <section class="grid-two">
-        <section class="card">
-          <h2>Experience</h2>
-          <ul id="experience" class="timeline"></ul>
+    <main class="layout">
+      <aside class="sidebar">
+        <section class="block">
+          <h2>Contacts</h2>
+          <ul class="plain" id="contacts"></ul>
         </section>
 
-        <section class="card">
-          <h2>Education</h2>
-          <ul id="education" class="timeline"></ul>
+        <section class="block">
+          <h2>Skills</h2>
+          <ul class="chips" id="skills"></ul>
         </section>
-      </section>
 
-      <section class="card">
-        <h2>Skills</h2>
-        <div id="skills" class="skills"></div>
-      </section>
+        <section class="block">
+          <h2>Key Achievements</h2>
+          <ul class="plain" id="achievements"></ul>
+        </section>
 
-      <section class="card ai-block">
-        <h2>AI Profile Summary</h2>
-        <p>
-          Generate a polished summary from profile data. If an API backend is configured, the app will use real LLM output; otherwise, it falls back to local summary mode.
-        </p>
-        <button id="generateSummary" class="btn btn--primary" type="button">Generate AI Summary</button>
-        <p id="aiSummary" class="ai-summary">No AI summary generated yet.</p>
-      </section>
+        <section class="block">
+          <h2>Certifications</h2>
+          <ul class="plain" id="certifications"></ul>
+        </section>
+      </aside>
 
-      <section class="card">
-        <h2>Tech Stack</h2>
-        <ul class="stack-list">
-          <li><strong>Frontend:</strong> HTML + CSS + vanilla JavaScript.</li>
-          <li><strong>Generative AI:</strong> OpenAI Responses API via serverless endpoint (`/api/generate-summary`).</li>
-          <li><strong>CI:</strong> GitHub Actions (syntax + smoke checks).</li>
-          <li><strong>CD:</strong> GitHub Pages deployment via Actions workflow.</li>
-        </ul>
+      <section class="content">
+        <header class="hero">
+          <h1 id="name"></h1>
+          <p id="role" class="role"></p>
+        </header>
+
+        <section class="block">
+          <h2>Summary</h2>
+          <p id="summary"></p>
+        </section>
+
+        <section class="grid-two">
+          <section class="block">
+            <h2>Projects</h2>
+            <div id="projects"></div>
+          </section>
+
+          <section class="block">
+            <h2>Experience</h2>
+            <div id="experience"></div>
+          </section>
+        </section>
       </section>
     </main>
-
-    <footer class="container footer">
-      <p>© <span id="year"></span> <span id="footerName">Abhishek Sundaresan</span></p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
