@@ -14,6 +14,7 @@ Upgraded with a modern interactive experience inspired by your shared reference.
 - Interactive project cards with hover transitions
 - Experience timeline cards
 - Live AI chat assistant with quick prompts, message bubbles, loading state, and custom input
+- AI tools: recruiter pitch generator, interview prep generator, and 90-day roadmap generator
 
 ## Run locally
 

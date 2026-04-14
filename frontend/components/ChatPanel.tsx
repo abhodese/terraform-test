@@ -39,8 +39,8 @@ export default function ChatPanel() {
   return (
     <motion.section className="card" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
       <div className="chat-head">
-        <h2>Interactive AI Assistant</h2>
-        <p>Ask live questions about architecture, experience, and impact.</p>
+        <h2>AI Portfolio Copilot</h2>
+        <p>Ask context-aware questions about leadership, projects, and technical decisions.</p>
       </div>
 
       <div className="prompt-row">
@@ -50,7 +50,7 @@ export default function ChatPanel() {
       </div>
 
       <div className="chat-box">
-        {messages.length === 0 ? <p className="muted">No messages yet. Try a prompt or ask your own question.</p> : null}
+        {messages.length === 0 ? <p className="muted">Start with a quick prompt or ask a custom question.</p> : null}
         {messages.map((msg, i) => (
           <p key={i} className={msg.from === "user" ? "bubble user" : "bubble ai"}>{msg.text}</p>
         ))}
