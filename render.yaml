@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: abhishek-ai-portfolio-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

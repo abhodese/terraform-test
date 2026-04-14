@@ -52,3 +52,22 @@ In Netlify site settings, set:
 ## Env var for backend
 
 - `GROQ_API_KEY`
+
+
+## Backend deployment (FastAPI)
+
+This repo now includes backend deployment wiring:
+
+- `backend/Dockerfile` for containerized FastAPI deploy
+- `render.yaml` for Render free web service
+- GitHub Action `deploy-backend-render.yml` to trigger Render deploy hook on `main`
+
+### Required GitHub secret
+
+- `RENDER_DEPLOY_HOOK_URL`
+
+### Required Render env var
+
+- `GROQ_API_KEY`
+
+After backend is live, set `NEXT_PUBLIC_API_BASE` in Netlify to your Render backend URL.
