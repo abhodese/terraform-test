@@ -31,8 +31,8 @@ Then visit:
 
 This repo now includes:
 
-- `netlify.toml` configured for **Next.js app in `frontend/`**
-- GitHub Action `deploy-netlify.yml` for automatic deploy from `main`
+- `netlify.toml` configured for **Next.js static export from `frontend/out`**
+- GitHub Action `deploy-netlify.yml` that builds `frontend/out` and deploys it from `main`
 
 ### Required GitHub Secrets
 
