@@ -1,8 +1,10 @@
 [build]
-  publish = "."
-  functions = "netlify/functions"
+  base = "frontend"
+  command = "npm install && npm run build"
+  publish = ".next"
 
-[[redirects]]
-  from = "/api/generate-summary"
-  to = "/.netlify/functions/generate-summary"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_PUBLIC_API_BASE = "https://your-fastapi-backend.onrender.com"
